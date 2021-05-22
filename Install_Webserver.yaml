@@ -1,0 +1,18 @@
+---
+- hosts: all
+  become: yes
+  tasks: 
+  - name: I want to insatll webserver on Ubuntu node
+    apt:
+     name: apache2
+     state: present
+
+  - name: I want to restart webserver on Ubuntu node
+    service: 
+     name: apache2
+     service: restarted
+       
+  - name: I want to install Tree
+    apt: 
+     name: tree
+     state: present
