@@ -16,3 +16,8 @@
     apt: 
      name: tree
      state: present
+
+  - name: I want to install wget
+    apt:
+      name: wget
+      state: present
