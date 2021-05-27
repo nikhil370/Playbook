@@ -4,7 +4,7 @@
   tasks:
   - name: I want to install Softwares
     apt:
-     name: {{item}}
+     name: "{{item}}"
      state: present
     loop:
     - git
