@@ -3,11 +3,7 @@
   become: yes
   tasks: 
   - name: I want to install webserver on Debian node
-   apt:
-    -name: apache2
-    state: present
-
-  - name: I want to insatll webserver on RedHat node 
-   yum:
-    -name: apache2
-    state: present
+    apt:
+     name: apache2
+     state: present
+    when: ansible_os_family == Debian
