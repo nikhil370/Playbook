@@ -2,9 +2,9 @@
 - hosts: 172.31.35.149
   become: yes
   tasks:
-  - name: I want to install Softwares
+  - name: I want to install Softwares on Ubuntu Node
     apt:
-     name: "{{item}}"
+     name: "{{item}}" 
      state: present
     loop:
     - git
