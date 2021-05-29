@@ -8,8 +8,20 @@
      state: present
     when: ansible_os_family == "Debian"
 
+  - name: I want to restart webserver on Debian node
+    service:
+     name: "{{mywebpackageforubuntu}}"
+     state: restart
+    when: ansible_os_family == "Debian"
+
   - name: I want to install webserver on RedHat node 
     yum:
      name: "{{mywebpackageforredhat}}"
      state: present
+    when: ansible_os_family == "RedHat"
+
+  - name: I want to restart webserver on RedHat node
+    service: 
+     name: "{{mywebpackageforredhat}}"
+     state: restart
     when: ansible_os_family == "RedHat"
