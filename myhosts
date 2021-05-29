@@ -5,3 +5,7 @@
 [mydbservers]
 172.31.35.556
 172.31.45.335
+
+[mywebservers:vars]
+mywebpackageforubuntu= apache2
+mywebpackageforredhat= httpd
