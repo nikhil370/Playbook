@@ -11,7 +11,7 @@
   - name: I want to restart webserver on Debian node
     service:
      name: "{{mywebpackageforubuntu}}"
-     state: restart
+     state: restarted
     when: ansible_os_family == "Debian"
 
   - name: I want to install webserver on RedHat node 
@@ -23,5 +23,5 @@
   - name: I want to restart webserver on RedHat node
     service: 
      name: "{{mywebpackageforredhat}}"
-     state: restart
+     state: restarted
     when: ansible_os_family == "RedHat"
