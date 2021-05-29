@@ -23,5 +23,5 @@
   - name: I want to restart webserver on RedHat node
     service: 
      name: "{{mywebpackageforredhat}}"
-     state: started
+     state: restarted
     when: ansible_os_family == "RedHat"
