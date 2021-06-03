@@ -1,0 +1,11 @@
+---
+- hosts: 172.31.35.149
+  become: yes
+  tasks:
+  - name: i wamt to display hostname
+    command: hostname
+    result: myresult
+  
+  - name: I want to display variable value
+    debug: 
+    msg : "{{myresult}}"
