@@ -9,3 +9,13 @@
   - name: I want to display variable value
     debug: 
      msg : "{{myresult}}"
+
+  - name: I want to install git
+    apt: 
+     state: present
+    when: myresult.stderr == ""
+
+  - name: I want to install tree
+    apt: 
+     state: present
+    when: myresult.stderr != ""
