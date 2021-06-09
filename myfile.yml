@@ -12,4 +12,4 @@
   - name: I want to start webserver on Ubuntu node
     service:
      name: apache2
-     state: present
+     state: started
