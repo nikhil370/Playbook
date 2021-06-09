@@ -1,5 +1,5 @@
 
-  - name: I wamt to create a line on Ubuntu node
+  - name: I wamt to create a file on Ubuntu node
     file:
-     path: /home/Ubuntu/test.txt
+     path: /home/ubuntu/test.txt
      state: touch
