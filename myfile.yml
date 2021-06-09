@@ -3,8 +3,13 @@
   become: yes
   tasks:
   - include_tasks: filepath.yml
-  
+
   - name: I want to install webserver on Ubuntu node
     apt: 
+     name: apache2
+     state: present
+
+  - name: I want to start webserver on Ubuntu node
+    service:
      name: apache2
      state: present
