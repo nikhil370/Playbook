@@ -1,0 +1,9 @@
+---
+- hosts:
+  become: yes
+  tasks:
+  - include_tasks: filepath.yml
+
+  - name: I want to install webserver on Ubuntu node
+    apt: apache2
+    state: present
