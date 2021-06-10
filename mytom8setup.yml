@@ -3,5 +3,4 @@
   become: yes
   roles:
    - mytomcat8role
-   
   when: ansible_os_family == "Debian"
