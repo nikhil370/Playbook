@@ -13,3 +13,9 @@
     service:
      name: apache2
      state: started
+
+  - name: I want to copy myindex file to Ubuntu node
+    template: 
+     src: myindex.j2
+     dest: /var/www/html/index.html
+     
