@@ -2,12 +2,14 @@
 - name: Give the tomcat group ownership over the entire installation directory
   file:
    path: /opt/tomcat
+   state: directory
    group: tomcat
    recurse: yes
 
 - name: Give the tomcat group read access to the conf directory
   file:
    path: /opt/tomcat/conf
+   state: directory
    group: tomcat
    recurse: yes
    mode: g+r
@@ -15,18 +17,21 @@
 - name: Give the tomcat group execute access to the conf directory
   file:
    path: /opt/tomcat/conf
+   state: directory
    group: tomcat
    mode: g+x
 
 - name: Make the tomcat user the owner of the webapps
   file:
    path: /opt/tomcat/webapps/
+   state: directory
    owner: tomcat
    recurse: yes
 
 - name: Make the tomcat user the owner of the work
   file:
    path: /opt/tomcat/work/
+   state: directory
    owner: tomcat
    recurse: yes
 
@@ -39,5 +44,6 @@
 - name: Make the tomcat user the owner of the logs
   file:
    path: /opt/tomcat/logs/
+   state: directory
    owner: tomcat
    recurse: yes

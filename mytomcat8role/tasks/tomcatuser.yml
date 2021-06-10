@@ -1,0 +1,16 @@
+---
+- name: Configure tomcat user
+  template:
+   src: mytemplate/tomcatuser.j2
+   dest: /opt/tomcat/conf/tomcat-users.xml
+
+- name: Configure tomcat manager app
+  template:
+   src: mytemplate/tomcatmanager.j2
+   dest: sudo nano /opt/tomcat/webapps/manager/META-INF/context.xml
+
+- name: Configure tomcat host manager app
+  template:
+   src: mytemplate/tomcathostmanager.j2
+   dest: sudo nano /opt/tomcat/webapps/host-manager/META-INF/context.xml
+
