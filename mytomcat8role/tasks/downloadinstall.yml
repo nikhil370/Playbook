@@ -12,6 +12,6 @@
    mode: 0755
 
 - name: Extract the archive to folder /opt/tomcat
-  commmand :
+  command :
    cmd: sudo tar xzvf apache-tomcat-8*tar.gz -C /opt/tomcat --strip-components=1
    creates: /opt/tomcat/LICENSE
