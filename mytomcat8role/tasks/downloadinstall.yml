@@ -12,7 +12,6 @@
    mode: 0755
 
 - name: Extract the archive to folder /opt/tomcat
-  unarchive:
-   src: /home/ubuntu/apache-tomcat-8.5.5.tar.gz
-   dest: /opt/tomcat
-   remote_src: True
+  commmand :
+   cmd: sudo tar xzvf apache-tomcat-8*tar.gz -C /opt/tomcat --strip-components=1
+   creates: /opt/tomcat/LICENSE
