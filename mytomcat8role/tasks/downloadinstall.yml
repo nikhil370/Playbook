@@ -15,3 +15,4 @@
   unarchive:
    src: /home/ubuntu/apache-tomcat-8.5.5.tar.gz
    dest: /opt/tomcat --strip-components=1
+   remote_src: True
