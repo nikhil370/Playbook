@@ -2,5 +2,5 @@
 - hosts: mywebservers
   become: yes
   roles:
-   - mytomcat8role
-  when: ansible_os_family == "Debian"
+   - {mytomcat8role, when: ansible_os_family == "Debian"}
+  
