@@ -7,10 +7,10 @@
 - name: Configure tomcat manager app
   template:
    src: mytemplate/tomcatmanager.j2
-   dest: sudo nano /opt/tomcat/webapps/manager/META-INF/context.xml
+   dest: /opt/tomcat/webapps/manager/META-INF/context.xml
 
 - name: Configure tomcat host manager app
   template:
    src: mytemplate/tomcathostmanager.j2
-   dest: sudo nano /opt/tomcat/webapps/host-manager/META-INF/context.xml
+   dest: /opt/tomcat/webapps/host-manager/META-INF/context.xml
 
