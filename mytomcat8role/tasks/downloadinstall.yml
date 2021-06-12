@@ -7,7 +7,7 @@
 
 - name: Create folder
   file:
-   path: /opt/tomcat/apache-tomcat-8.5.5
+   path: /opt/tomcat
    state: directory
    mode: 0755
 
@@ -19,5 +19,5 @@
 - name: Extract the archive to folder /opt/tomcat
   ansible.builtin.unarchive:
    src: /home/ubuntu/apache-tomcat-8.5.5.tar.gz
-   dest: /opt/tomcat/apache-tomcat-8.5.5
+   dest: /opt/tomcat
    remote_src: yes
