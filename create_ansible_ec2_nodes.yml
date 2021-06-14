@@ -7,8 +7,10 @@
      key_name: myUbuntu
      instance_type: t2.micro
      image: ami-04e7c82547d6f1b08
-     wait: yes
-     group: webserver
+     group: sg-06b87423e2a34588b
+     region: ap-south-1
      count: 2
-     vpc_subnet_id: subnet-29e63245
+     vpc_subnet_id: subnet-5148aa3a
      assign_public_ip: yes
+     instance_tags:
+        Name: myAnsible_Ubuntunode_Auto
