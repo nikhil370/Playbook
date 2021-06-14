@@ -7,7 +7,7 @@
      key_name: myUbuntu
      instance_type: t2.micro
      image: ami-04e7c82547d6f1b08
-     group: sg-06b87423e2a34588b
+     group: launch-wizard-6
      region: ap-south-1
      count: 2
      vpc_subnet_id: subnet-5148aa3a
