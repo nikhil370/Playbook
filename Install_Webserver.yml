@@ -20,4 +20,4 @@
   - name: I want to install wget
     apt:
       name: wget
-      state: absent
+      state: present
