@@ -4,3 +4,11 @@
    url: https://get.jenkins.io/war-stable/2.289.1/jenkins.war
    dest: /opt/tomcat/webapps
    force_basic_auth: yes
+
+- name: Deploy MahaLogin application
+  get_url:
+   url: http://3.7.252.128:8082/artifactory/Night_Build_SIT/com/maha/mahaLogin/2.0/mahaLogin-2.0.war
+   dest: /opt/tomcat/webapps
+   force_basic_auth: yes
+   url_username: admin
+   url_password: Nikhil@m9
